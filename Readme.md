@@ -1,9 +1,9 @@
 
-**Setting up the Project**
+## Setting up the Project
 
 1.  Clone the Repository
 
-    -   Clone the project repository from your preferred source control system (e.g., Git).
+    -   Clone the project repository from `https://github.com/naveens800/recipe_management.git`
 2.  Create a Virtual Environment (Optional but Recommended)
 
     -   Create a new virtual environment using your preferred tool (e.g., `virtualenv`, `conda`, etc.).
@@ -27,7 +27,25 @@
 
         ```
 
-**API Documentaion**
+## Running Tests
+
+This project includes tests written in the `api/tests.py` module. To run the tests, follow these steps:
+
+1.  Navigate to the Project Directory
+
+    -   Ensure that you are in the project's root directory.
+2.  Run Tests
+
+    -   Run the following command to execute all tests:
+
+        ```
+        python manage.py test api
+
+        ```
+
+    -   This command will run all tests defined in the `api/tests.py` module.
+
+## API Documentaion
 
 1.  Register View
 
