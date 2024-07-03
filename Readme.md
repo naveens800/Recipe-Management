@@ -73,8 +73,7 @@ This project includes tests written in the `api/tests.py` module. To run the t
     -   Permissions: No authentication required
     -   Request Body: The request body should contain the refresh token (e.g., `{"refresh": "myrefreshtoken"}`)
     -   Response: If the refresh token is valid, the response will contain a new access token.
-4.  Recipe List/Create View
-
+1.  Recipe List/Create View
     -   URL: `/recipes/`
     -   HTTP Methods: `GET`, `POST`
     -   Description: This endpoint is used to list all available recipes and create new recipes.
@@ -82,6 +81,8 @@ This project includes tests written in the `api/tests.py` module. To run the t
     -   Permissions: `IsAuthenticated` (authentication required)
     -   Serializer: `RecipeSerializer`
     -   Search Filters: `title`, `ingredients` (search filters are enabled for this endpoint)
+    -   Search Query Parameter: `search`
+    -   Example Usage: `/recipes/?search=chicken` (searches for recipes with "chicken" in the title or ingredients)
     -   Note: When creating a new recipe, the `perform_create` method is overridden to automatically set the `created_by` field to the current authenticated user.
 5.  Recipe Retrieve/Update/Destroy View
 
