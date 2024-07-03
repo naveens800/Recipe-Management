@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import RecipeRetrieveUpdateDestroyView, RecipeListCreateView, RegisterView
+from .views import RecipeRetrieveUpdateDestroyView, RecipeListCreateView, register_new_user
 
 urlpatterns = [
     path("recipes/", RecipeListCreateView.as_view(), name="recipe-list-create"),
@@ -8,5 +8,5 @@ urlpatterns = [
         RecipeRetrieveUpdateDestroyView.as_view(),
         name="recipe-detail",
     ),
-    path("register/", RegisterView.as_view(), name="register"),
+    path("register/", register_new_user, name="register"),
 ]
