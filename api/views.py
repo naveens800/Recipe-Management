@@ -8,12 +8,14 @@ from .permissions import IsOwnerOrReadOnly
 
 
 class RegisterView(generics.CreateAPIView):
+    "This view class is used to register new users."
     queryset = User.objects.all()
     permission_classes = (AllowAny,)
     serializer_class = UserSerializer
 
 
 class RecipeListCreateView(generics.ListCreateAPIView):
+    "This view class is used to create and list recipes."
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
     permission_classes = [IsAuthenticated]
@@ -25,6 +27,7 @@ class RecipeListCreateView(generics.ListCreateAPIView):
 
 
 class RecipeRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    "This view class is used to retrieve, update, and delete recipes."
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
     permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
